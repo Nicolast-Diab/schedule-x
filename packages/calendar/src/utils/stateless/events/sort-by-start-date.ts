@@ -5,6 +5,12 @@ export const sortEventsByStartAndEnd = (
   a: CalendarEventInternal,
   b: CalendarEventInternal
 ) => {
+  const aIndex = a._options?.sortIndex ?? 0
+  const bIndex = b._options?.sortIndex ?? 0
+
+  if (aIndex < bIndex) return -1
+  if (aIndex > bIndex) return 1
+
   if (a.start === b.start) {
     if (a.end < b.end) return 1
     if (a.end > b.end) return -1
@@ -24,7 +30,11 @@ export const sortEventsForMonthGrid = (
   const bStartDate = dateFromDateTime(b.start)
   const aEndDate = dateFromDateTime(a.end)
   const bEndDate = dateFromDateTime(b.end)
+  const aIndex = a._options?.sortIndex ?? 0
+  const bIndex = b._options?.sortIndex ?? 0
 
+  if (aIndex < bIndex) return -1
+  if (aIndex > bIndex) return 1
   /**
    * For events that start and end at the same day, sort them by their start time.
    * If they only start on the same day but end on different days, the function needs to move on;

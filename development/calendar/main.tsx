@@ -83,7 +83,7 @@ const calendar = createCalendar({
   showWeekNumbers: true,
   firstDayOfWeek: 1,
   views: [createViewMonthGrid(), createViewWeek(), createViewDay(), createViewMonthAgenda()],
-  defaultView: 'week',
+  defaultView: 'month-grid',
   callbacks: {
     onEventUpdate(event) {
       console.log('onEventUpdate', event)
@@ -248,15 +248,36 @@ const calendar = createCalendar({
   events: [
       {
         "id": 1,
-        "title": "e0",
+        "title": "e1",
         "start": "2025-05-28 01:00",
-        "end": "2025-05-28 01:00"
+        "end": "2025-05-28 01:00",
+        _options: {
+          sortIndex: 3
+        }
       },
       {
         "id": 2,
-        "title": "e1",
-        "start": "2025-05-28 01:00",
-        "end": "2025-05-28 01:00"
+        "title": "e0",
+        "start": "2025-05-28 11:00",
+        "end": "2025-05-29 12:00",
+        _options: {
+          sortIndex: 1
+        }
+      },
+      {
+        "id": 22,
+        "title": "e0",
+        "start": "2025-05-29 01:00",
+        "end": "2025-05-29 02:00",
+        _options: {
+          sortIndex: 2
+        }
+      },
+      {
+        "id": 23,
+        "title": "e0",
+        "start": "2025-05-29 01:00",
+        "end": "2025-05-29 02:00"
       },
       {
         "id": 3,
@@ -269,7 +290,55 @@ const calendar = createCalendar({
         "title": "e3",
         "start": "2025-05-28 01:00",
         "end": "2025-05-28 01:00"
-      }
+      },
+      {
+        "id": 5,
+        "title": "e3",
+        "start": "2025-05-28 01:00",
+        "end": "2025-05-28 01:00"
+      },
+      {
+        "id": 6,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
+      {
+        "id": 7,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
+      {
+        "id": 8,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
+      {
+        "id": 9,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
+      {
+        "id": 10,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
+      {
+        "id": 11,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
+      {
+        "id": 12,
+        "title": "e3",
+        "start": "2025-05-27 01:00",
+        "end": "2025-05-27 01:00"
+      },
   ],
 }, [
   eventsServicePlugin,
