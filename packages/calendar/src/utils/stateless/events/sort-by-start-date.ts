@@ -1,6 +1,9 @@
 import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { dateFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
 
+// TODO: need to renaming this function as it's no longer sorted exclusively on startDate
+// TODO: rename the file too and maybe move sortEventsForMonthGrid in a new file
+// TODO: should we accept negative values as sortIndex? Current implementation does support it, but it might be confusing
 export const sortEventsByStartAndEnd = (
   a: CalendarEventInternal,
   b: CalendarEventInternal

@@ -82,6 +82,8 @@ const calendar = createCalendar({
   },
   showWeekNumbers: true,
   firstDayOfWeek: 1,
+  minDate: '2025-04-11',
+  maxDate: '2025-08-11',
   views: [createViewMonthGrid(), createViewWeek(), createViewDay(), createViewMonthAgenda()],
   defaultView: 'month-grid',
   callbacks: {
@@ -193,18 +195,25 @@ const calendar = createCalendar({
   },
   backgroundEvents: [
     {
-      title: 'Out of office',
-      start: '2025-02-11',
-      end: '2025-02-11',
+      start: '2024-03-11',
+      end: '2025-04-11',
       style: {
         // create tilted 5px thick gray lines
         backgroundImage: 'repeating-linear-gradient(45deg, #ccc, #ccc 5px, transparent 5px, transparent 10px)',
         opacity: 0.5,
       },
-      rrule: 'FREQ=WEEKLY;INTERVAL=2;BYDAY=TU,TH;',
+      //       rrule: 'FREQ=WEEKLY;INTERVAL=2;BYDAY=TU,TH;',
     },
     {
-      title: 'Out of office',
+      start: '2025-08-11',
+      end: '2025-09-01',
+      style: {
+        // create tilted 5px thick gray lines
+        backgroundImage: 'repeating-linear-gradient(45deg, #ccc, #ccc 5px, transparent 5px, transparent 10px)',
+        opacity: 0.5,
+      },
+    },
+    {
       start: '2024-12-03',
       end: '2024-12-03',
       style: {
