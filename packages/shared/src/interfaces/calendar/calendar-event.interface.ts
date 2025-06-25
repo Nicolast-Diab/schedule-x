@@ -3,6 +3,7 @@ import { EventFragments } from './event-fragments'
 
 export type CalendarEventOptions = {
   disableDND?: boolean
+  sortIndex?: number
   disableResize?: boolean
   additionalClasses?: string[]
 }
